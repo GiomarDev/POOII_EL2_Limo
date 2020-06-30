@@ -1,0 +1,17 @@
+﻿@model IEnumerable<EL2.Models.Viaje>
+
+@{
+    ViewBag.Title = "Buscar Viajes Por Año";
+}
+
+<h2>BuscarViajesPorAño</h2>
+
+@using (Html.BeginForm())
+{
+<strong>Ingrese el año : </strong>
+@Html.TextBox("fecha")
+    <button>Buscar</button>
+
+}
+
+@Html.Partial("_PartialViajes")

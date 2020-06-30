@@ -1,0 +1,26 @@
+﻿@model IEnumerable<EL2.Models.Viaje>
+
+<table class="table">
+<tr>
+    <th>Id</th>
+    <th>Origen</th>
+    <th>Destino</th>
+    <th>VehiculoId</th>
+    <th>ConductorId</th>
+    <th>Fecha Partida</th>
+    <th>Fecha Llegada</th>
+</tr>
+@foreach (var p in Model)
+{
+    <tr>
+        <td>@Html.DisplayFor(modelitem => p.idViaje)</td>
+        <td>@Html.DisplayFor(modelitem => p.Origen)</td>
+        <td>@Html.DisplayFor(modelitem => p.Destino)</td>
+        <td>@Html.DisplayFor(modelitem => p.VehiculoId)</td>
+        <td>@Html.DisplayFor(modelitem => p.ConductorId)</td>
+        <td>@Html.DisplayFor(modelitem => p.FechaPar)</td>
+        <td>@Html.DisplayFor(modelitem => p.FechaLlega)</td>
+
+    </tr>
+}
+</table>

@@ -1,0 +1,30 @@
+﻿
+@model IEnumerable<EL2.Models.Conductor>
+
+<table class="table">
+    <tr>
+        <th>ConductorId</th>
+        <th>Dni</th>
+        <th>Nombre</th>
+        <th>ApellidoPaterno</th>
+        <th>ApellidoMaterno</th>
+        <th>Brevete</th>
+        <th>Telefono</th>
+        <th>Estado</th>
+        <th>IdTipoDocumento</th>
+    </tr>
+    @foreach (var p in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(modelitem => p.idConductor)</td>
+            <td>@Html.DisplayFor(modelitem => p.DNI)</td>
+            <td>@Html.DisplayFor(modelitem => p.Nombre)</td>
+            <td>@Html.DisplayFor(modelitem => p.ApellidoPaterno)</td>
+            <td>@Html.DisplayFor(modelitem => p.ApellidoMaterno)</td>
+            <td>@Html.DisplayFor(modelitem => p.Brevete)</td>
+            <td>@Html.DisplayFor(modelitem => p.Telefono)</td>
+            <td>@Html.DisplayFor(modelitem => p.Estado)</td>
+            <td>@Html.DisplayFor(modelitem => p.idTipoDocumento)</td>
+        </tr>
+    }
+</table>

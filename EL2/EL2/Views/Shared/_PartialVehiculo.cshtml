@@ -1,0 +1,25 @@
+﻿@model IEnumerable<EL2.Models.Vehiculo>
+
+<table class="table">
+    <tr>
+
+        <th>idVehiculo</th>
+        <th>Placa</th>
+        <th>Año</th>
+        <th>Modelo</th>
+        <th>idMarca</th>
+ 
+    </tr>
+    @foreach (var p in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(modelitem => p.idVehiculo)</td>
+            <td>@Html.DisplayFor(modelitem => p.Placa)</td>
+            <td>@Html.DisplayFor(modelitem => p.Año)</td>
+            <td>@Html.DisplayFor(modelitem => p.Modelo)</td>
+            <td>@Html.DisplayFor(modelitem => p.idMarca)</td>
+
+        </tr>
+    }
+</table>
+

@@ -1,0 +1,17 @@
+﻿@model IEnumerable<EL2.Models.Conductor>
+
+@{
+    ViewBag.Title = "BuscarViajesPorConductor";
+}
+
+<h2>Buscar Viajes Por Conductor</h2>
+
+@using (Html.BeginForm())
+{
+    <strong>Ingrese el año : </strong>
+    @Html.TextBox("nombre")
+    <button>Buscar</button>
+
+}
+
+@Html.Partial("_PartialConductor")

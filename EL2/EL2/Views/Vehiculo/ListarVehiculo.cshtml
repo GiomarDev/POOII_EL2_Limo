@@ -1,0 +1,59 @@
+﻿@model IEnumerable<EL2.Models.Vehiculo>
+
+@{
+    ViewBag.Title = "ListarVehiculo";
+}
+
+<h2>Listar Vehiculo</h2>
+@Styles.Render("~/Content/estilos.css")
+<img src="~/img/dota.jpg" height="300" />
+<p>
+    @Html.ActionLink("Registrar Nuevo Vehiculo", "RegistrarVehiculo")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Placa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Año)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Modelo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idMarca)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Marca)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Placa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Año)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Modelo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.idMarca)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Marca)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "EditarVehiculo", new { id = item.idVehiculo }) |
+                @Html.ActionLink("Ver", "VerVehiculo", new { id = item.idVehiculo }) |
+                @Html.ActionLink("Eliminar", "EliminarVehiculo", new { id = item.idVehiculo })
+            </td>
+        </tr>
+    }
+
+</table>
